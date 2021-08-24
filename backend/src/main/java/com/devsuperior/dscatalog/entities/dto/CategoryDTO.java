@@ -1,10 +1,12 @@
-package com.devsuperior.dscatalog.entities;
+package com.devsuperior.dscatalog.entities.dto;
 
 import java.io.Serializable;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import com.devsuperior.dscatalog.entities.Category;
 
 public class CategoryDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
