@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.devsuperior.dscatalog.services.exceptions.EntityNotFoundException;
+import com.devsuperior.dscatalog.services.exceptions.ResourceNotFoundException;
 
 @ControllerAdvice
 public class ResourceExceptionHandler implements Serializable{
@@ -18,7 +18,7 @@ public class ResourceExceptionHandler implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@ExceptionHandler
-	public ResponseEntity<StandardError> entityNotFound (EntityNotFoundException e, HttpServletRequest http){
+	public ResponseEntity<StandardError> entityNotFound (ResourceNotFoundException e, HttpServletRequest http){
 		StandardError err = new StandardError();
 		err.setTimeStamp(Instant.now());
 		err.setStatus(HttpStatus.NOT_FOUND.value());
