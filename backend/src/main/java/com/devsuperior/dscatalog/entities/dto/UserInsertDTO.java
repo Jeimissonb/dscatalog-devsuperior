@@ -2,6 +2,9 @@ package com.devsuperior.dscatalog.entities.dto;
 
 import java.io.Serializable;
 
+import com.devsuperior.dscatalog.services.UserInsertValid;
+
+@UserInsertValid
 public class UserInsertDTO extends UserDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
